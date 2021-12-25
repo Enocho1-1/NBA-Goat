@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en"></html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="era.css">
+    <title>00's Era</title>
+  </head>
+  <body>
+    <header id="headerFour" class="mainHeader">
+      <h1>The 00's Era Greats</h1>
+    </header>
+      <div class="primary">
+          <main></main>
+      </div>
+      <script>
+
+      let main = document.querySelector('main'),
+          msg;
+      // Thousands contructor 
+      class Thousands {
+        constructor(image,name,position,teams,points,rebounds,assists, accolades, rank){
+          this.image = image;
+          this.name = name;
+          this.position = position;
+          this.teams = teams;
+          this.points = points;
+          this.rebounds = rebounds;
+          this.assists = assists;
+          this.accolades = accolades;
+          this.rank = rank;
+        }
+
+        format(){
+        
+            msg =  `<img src=${this.image}>
+                    <h1>Rank:${this.rank}</h1>
+                    <h1>Name:${this.name}</h1>
+                    <h1>Position:${this.position}</h1>
+                    <h2>Teams:${this.teams}</h2>
+                    <h2>Accolades:${this.accolades}</h2>
+                    <h2>Points:${this.points}</h2>
+                    <h2>Rebounds:${this.rebounds}</h2>
+                    <h2>Assists:${this.assists}</h2>`;
+            return msg;
+        }
+      }
+ 
+
+      // Instantiate Thousands constructor 
+      const kobe = new Thousands('https://s.yimg.com/ny/api/res/1.2/aH.7pTeHlCQyMYI5FUhcGg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTQyMDtoPTU2MA--/https://s.yimg.com/os/en/blogs/sptusnbaexperts/Kobe-Bryant-walks-with-the-ball-during-a-Nov.-14-2005-game-against-the-Memphis-Grizzlies-at-FedExForum.-Getty-Images.jpg','Kobe Bryant', 'Shooting Guard', 'Los Angeles Lakers', 25.0, 5.2, 4.7, 'Hall of Fame, 18x All Star,2x Scoring Champ,5x NBA Champ,15x All-NBA,12x All-Defensive,1996-97 All-Rookie,4x AS MVP,2x Finals MVP,2007-08 MVP,NBA 75th Anniv. Team ', 1);
+
+      const tim = new Thousands('https://news4sanantonio.com/resources/media/88f315af-a847-471b-b057-edee02821000-large3x4_parkerduncanginobili1.jpg?1487995649912','Tim Duncan', 'Center and Power Forward','San Antinio Spurs', 19.0, 10.8, 3.0, ' Hall of Fame,16x All Star,15x All Star,5x NBA Champ, 15x All-NBA, 15x All-Defensive,1997-98 All-Rookie,1999-00 AS MVP,3x Finals MVP,2x MVP,NBA 75th Anniv. Team,1997-98 ROY', 2);
+
+      const shaq = new Thousands('https://i.pinimg.com/originals/4c/e4/ae/4ce4ae07a7f2eacc607a08b9658f8c30.jpg', 'Shaquille O\'Neal','Center', 'Orlando Magic, Los Angeles Lakers, Miami Heat, Phoenix Suns, Cleveland Cavaliers, Boston Celtics', 23.7, 10.7, 2.5,' Hall of Fame,16x All Star,15x All Star,2x Scoring Champ,4x NBA Champ, 14x All-NBA,3x All-Defensive,1992-93 All-Rookie,3x AS MVP,3x Finals MVP,1999-00 MVP,NBA 75th Anniv. Team,1992-93 ROY', 3);
+
+      const lebron = new Thousands('https://thealbex.files.wordpress.com/2013/06/lebron-james-2004-05-via-the-grand-archives.jpg','LeBron James','Small Forward, Power Forward, Point Guard, and Shooting Guard','Cleveland Cavaliers, Miami Heat, Los Angeles Lakers',27.0, 7.4,7.4, '17x All Star,2007-08 Scoring Champ,2019-20 AST Champ,4x NBA Champ,17x All-NBA,6x All-Defensive,2003-04 All-Rookie,3x AS MVP,4x Finals MVP,4x MVP, NBA 75th Anniv. Team,2003-04 ROY', 4);
+
+      const dwade = new Thousands('https://people.brandeis.edu/~devallon/cs2a/wade%201.jpg', 'Dwyane Wade', 'Shooting Guard and Point Guard', 'Miami Heat, Chicago Bulls, Cleveland Cavaliers', 22.0, 4.7, 5.4, '13x All Star, 2008-09 Scoring Champ,3x NBA Champ,8x All-NBA,3x All-Defensive,2003-04 All-Rookie,2009-10 AS MVP,2005-06 Finals MVP,NBA 75th Anniv. Team', 5 );
+
+      const kevin = new Thousands('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw_jxhkbfjMGjikW6ecpgBdlDhOwTDCTpVvjnkSr-Dui5OnyVT79Andcbu58oPpER0lfs&usqp=CAU','Kevin Garnett', 'Power Forward, Center, and Small Forward', ' Minnestoa Timberwolves, Boston Celtics, Brooklyn Nets', 17.8, 10.0, 3.7, 'Hall of Fame,15x All Star,4x TRB Champ,2008 NBA Champ,9x All-NBA,12x All-Defensive,1995-96 All-Rookie,2002-03 AS MVP,2007-08 Def. POY,2003-04 MVP,NBA 75th Anniv. Team', 6);
+
+    
+
+      const nash = new Thousands('https://static01.nyt.com/images/2020/09/08/sports/08nba-stein-1/08nba-stein-1-mediumSquareAt3X-v2.jpg','Steve Nash', 'Point Guard', 'Dallas Mavericks, Phoenix Suns, Los Angeles Lakers', 14.3, 3.0, 8.5,'Hall of Fame8x All Star,5x AST Champ,7x All-NBA,2x MVP,NBA 75th Anniv. Team', 7);
+
+      const iverson = new Thousands('https://cdn.bleacherreport.net/images_root/slideshows/209/slideshow_20948/default.jpg?x=401838', 'Allen Iverson', 'Shooting Guard and Point Guard', 'Philedelphia Sixers, Denver Nuggets, Detriot Pistons, Memphis Grizzles', 26.7, 3.7, 6.2, 'Hall of Fame,11x All Star,4x Scoring Champ,3x STL Champ,7x All-NBA,1996-97 All-Rookie,2x AS MVP,2000-01 MVP,NBA 75th Anniv. Team,1996-97 ROY', 8);
+
+      const dirk = new Thousands('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/DirkNowitzki.jpg/1200px-DirkNowitzki.jpg', 'Dirk Nowitzki', 'Power Forward and Center', 'Dallas Mavericks', 20.7, 7.5,2.4, '14x All Star,2011 NBA Champ,12x All-NBA,2010-11 Finals MVP,2006-07 MVP,NBA 75th Anniv. Team', 9);
+
+      const kidd = new Thousands('http://www.chinadaily.com.cn/english/doc/2004-12/07/xin_051201071014718203735.jpg', 'Jason Kidd', 'Point Guard', 'Dallas Mavericks, Phoenix Suns, New Jersey Nets, New York Knicks', 24.8, 6.7, 4.9,' Hall of Fame,12x All Star,1966-67 Scoring Champ,1974-75 STL Champ,1975 NBA Champ,6x All-NBA,1996-97 ABA All-Time Team,4x All-ABA,1965-66 All-Rookie,1966-67 AS MVP,1974-75 Finals MVP,1965-66 ROY', 10 );
+
+      main.innerHTML = `${kobe.format()} ${tim.format()} ${shaq.format()} ${lebron.format()} ${dwade.format()} ${kevin.format()} ${nash.format()} ${iverson.format()} ${dirk.format()} ${kidd.format()}`;
+      </script>
+  </body>
+
+</html>

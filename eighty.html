@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"></html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="era.css">
+    <title>80's Era</title>
+  </head>
+  <body>
+    <header id="headerTwo" class="mainHeader">
+      <h1>The 80's Era Greats</h1>
+    </header>
+      <div class="primary">
+          <main></main>
+      </div>
+    <script>
+
+        let main = document.querySelector('main'),
+                  msg;
+              // Eighty contructor 
+              class Eighty {
+                constructor(image,name,position,teams,points,rebounds,assists, accolades, rank){
+                  this.image = image;
+                  this.name = name;
+                  this.position = position;
+                  this.teams = teams;
+                  this.points = points;
+                  this.rebounds = rebounds;
+                  this.assists = assists;
+                  this.accolades = accolades;
+                  this.rank = rank;
+                }
+
+                format(){
+                
+                    msg =  `<img src=${this.image}>
+                            <h1>Rank:${this.rank}</h1>
+                            <h1>Name:${this.name}</h1>
+                            <h1>Position:${this.position}</h1>
+                            <h2>Teams:${this.teams}</h2>
+                            <h2>Accolades:${this.accolades}</h2>
+                            <h2>Points:${this.points}</h2>
+                            <h2>Rebounds:${this.rebounds}</h2>
+                            <h2>Assists:${this.assists}</h2>`;
+                    return msg;
+                }
+              }
+
+              //Instantiate Eighty construtor 
+              const magic = new Eighty('https://cdn.amomama.com/58fc30cad679061ceba6dbc056d05bbe15770871565618266.jpg?width=2404&height=3606','Magic Johnson','Point Guard,Shooting Guard, and Power Forward','Los Angeles Lakers',19.5,7.2,11.2,` Hall of Fame, 12x All Star, 4x AST Champ, 2x STL Champ, 5x NBA Champ, 10x All-NBA, 1979-80 All-Rookie, 2x AS MVP, 3x Finals MVP,3x MVP`, 1);
+
+              const larry = new Eighty('https://cdn.bleacherreport.net/images_root/slides/photos/000/483/953/1738504_original.jpg?1288892490','Larry Bird','Small Forward and Power Forward','Boston Celtics',24.0, 10.0, 6.3, ` Hall of Fame, 12x All Star, 3x NBA Champ, 10x All-NBA, 3x All-Defensive, 1979-80 All-Rookie, 1981-82 AS MVP, 2x Finals MVP, 3x MVP, 1979-80 ROY`, 2);
+
+              const kareem = new Eighty('https://www.nba.com/resources/static/team/v2/lakers/images/press/kareem_statue/kareem_250.jpg','Kareem Abdul-Jabbar', 'Center', 'Milwaukee Bucks, Los Angeles Lakers', 24.6, 11.2, 3.6,` Hall of Fame, 19x All Star, 2x Scoring Champ, 1975-76 TRB Champ, 4x BLK Champ, 6x NBA Champ, 15x All-NBA, 11x All-Defensive, 1969-70 All-Rookie, 2x Finals MVP, 6x MVP, 1969-70 ROY` , 3);
+
+              const moses = new Eighty('https://streetlinevideo.com/wp-content/uploads/2018/03/29541296_10214828999532474_5788741590562427833_n.jpg', 'Moses Malone', 'Center and Power Forward ', 'Utah Stars, Spirit of St.Louis, Buffalo Braves, Houston Rockets, Philadelphia 76ers, Washington Bullets, Atlanta Hawks, Milwaukee Bucks, San Antinio Spurs', 20.3, 12.3, 1.3, ` Hall of Fame, 13x All Star, 6x TRB Champ, 1983 NBA Champ, 8x All-NBA, 1996-97 ABA All-Time Team, 2x All-Defensive, 1974-75 All-Rookie, 1982-83 Finals MVP, 3x MVP`, 4 );
+
+              const isiah = new Eighty('https://www.gannett-cdn.com/presto/2020/04/24/PDTF/db492885-7d6d-4292-8cbd-a090be45f16e-TNS_SPORTS-BKN-PISTONS-1.jpg?crop=1109,1899,x233,y67&width=300&height=514&format=pjpg&auto=webp', 'Isiah Thomas','Point Guard',' Detroit Pistons',19.2, 3.6, 9.3, `Hall of Fame,12x All Star,1984-85 AST Champ, 2x NBA Champ,5x All-NBA,1981-82 All-Rookie,2x AS MVP,1989-90 Finals MVP`, 5);
+
+              const jordan = new Eighty('https://pbs.twimg.com/media/EJOWs21XkAAGRRs.jpg','Michael Jordan','Shooting Guard and Small Forward','Chicago Bulls, Washington Wizards',30.1,6.2,5.3 ,`Hall of Fame,,14x All Star,,10x Scoring Champ,,3x STL Champ,,6x NBA Champ,,11x All-NBA,,9x All-Defensive,,1984-85 All-Rookie,,3x AS MVP,,1987-88 Def. POY,,6x Finals MVP,,5x MVP, ,1984-85 ROY`, 6);
+
+              const erving = new Eighty('https://cdn.nba.com/manage/2020/10/julius-erving-nets-392x588.jpg', 'Julius Erving', 'Forward', 'Philadelphia 76ers', 24.2, 8.5, 4.2, ` Hall of Fame,16x All Star, 1983 NBA Champ, 2x ABA Champ, 7x All-NBA, 1996-97 ABA All-Time Team, 5x All-ABA, 1975-76 All-Defensive, 1971-72 All-Rookie, 2x AS MVP, 4x MVP`, 7);
+
+              const worthy = new Eighty('https://i.pinimg.com/474x/62/dd/8d/62dd8d861c2b815b47349dbce5610751.jpg', 'James Worthy', 'Small Forward and Power Forward', 'Los Angeles Lakers', 17.6, 5.1, 3.0,  `Hall of Fame, 7x All Star, 3x NBA Champ, 2x All-NBA, 1982-83 All-Rookie, 1987-88 Finals MVP`, 8);
+
+              const mcHale = new Eighty('https://www.gannett-cdn.com/media/USATODAY/USATODAY/2013/03/17/xxx-kevin-mchale-action-portrait-56156683dlt_dna034091076-sd679-3_4.jpg', 'Kevin McHale', 'Power Forward', 'Boston Celtics', 17.9, 7.3, 1.7, `Hall of Fame, 7x All Star, 3x NBA Champ, 1986-87 All-NBA, 6x All-Defensive, 1980-81 All-Rookie, 2x Sixth Man`, 9);
+
+              const hakeem = new Eighty('https://i.pinimg.com/736x/55/83/9a/55839a52caed363a542d0ea43dccfce3.jpg','Hakeem Olajuwon',' Center','Houston Rockets, Toronto Raptors',21.8,11.1,2.5,`Hall of Fame,,12x All Star,,2x TRB Champ,3x BLK Champ,2x NBA Champ,12x All-NBA,9x All-Defensive,1984-85 All-Rookie,2x Def. POY,2x Finals MVP,1993-94 MVP`, 10);
+
+          
+              main.innerHTML = `${magic.format()} ${larry.format()} ${kareem.format()} ${moses.format()} ${isiah.format()} ${jordan.format()} ${erving.format()} ${worthy.format()} ${mcHale.format()}  ${hakeem.format()}`;
+
+      
+
+    </script>
+  </body>
+
+</html>

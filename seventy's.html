@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"></html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="era.css">
+    <title>70's Era</title>
+  </head>
+  <body>
+    <header id="headerOne" class="mainHeader">
+      <h1>The 70's Era Greats</h1>
+    </header>
+      <div class="primary">
+          <main></main>
+      </div>
+      <script>
+          let main = document.querySelector('main'),
+                  msg;
+              // Seventy contructor 
+              class Seventy {
+                constructor(image,name,position,teams,points,rebounds,assists, accolades, rank){
+                  this.image = image;
+                  this.name = name;
+                  this.position = position;
+                  this.teams = teams;
+                  this.points = points;
+                  this.rebounds = rebounds;
+                  this.assists = assists;
+                  this.accolades = accolades;
+                  this.rank = rank;
+                }
+
+                format(){
+                
+                    msg =  `<img src=${this.image}>
+                            <h1>Rank:${this.rank}</h1>
+                            <h1>Name:${this.name}</h1>
+                            <h1>Position:${this.position}</h1>
+                            <h2>Teams:${this.teams}</h2>
+                            <h2>Accolades:${this.accolades}</h2>
+                            <h2>Points:${this.points}</h2>
+                            <h2>Rebounds:${this.rebounds}</h2>
+                            <h2>Assists:${this.assists}</h2>`;
+                    return msg;
+                }
+              }
+
+              const kareem = new Seventy('https://lasentinel.net/wp-content/uploads/sites/5/2020/06/9-200213_kareem.jpg','Kareem Abdul-Jabbar', 'Center', 'Milwaukee Bucks, Los Angeles Lakers', 24.6, 11.2, 3.6,` Hall of Fame, 19x All Star, 2x Scoring Champ, 1975-76 TRB Champ, 4x BLK Champ, 6x NBA Champ, 15x All-NBA, 11x All-Defensive, 1969-70 All-Rookie, 2x Finals MVP, 6x MVP, 1969-70 ROY` , 1);
+
+              const erving = new Seventy('https://cdn.nba.com/manage/2020/10/julius-erving-nets-392x588.jpg', 'Julius Erving', 'Forward', 'Philadelphia 76ers', 24.2, 8.5, 4.2, ` Hall of Fame,16x All Star, 1983 NBA Champ, 2x ABA Champ, 7x All-NBA, 1996-97 ABA All-Time Team, 5x All-ABA, 1975-76 All-Defensive, 1971-72 All-Rookie, 2x AS MVP, 4x MVP`, 2);
+
+              const hayes = new Seventy('https://i.cdn.turner.com/nba/nba/wizardsnba/media/hayes_300_080515.jpg', 'Elvin Hayes', 'Power Forward and Center', 'San Diego Rockets, Houston Rockets, Baltimore Bullets', 'San Diego Rockets, Houston Rockets, Baltimore Bullets', 21.0, 12.5 ,1.8, ` Hall of Fame, 12x All Star, 1968-69 Scoring Champ, 2x TRB Champ, 1978 NBA Champ, 6x All-NBA, 2x All-Defensive, 1968-69 All-Rookie`, 3);
+
+              const walt = new Seventy('https://dailyknicks.com/wp-content/uploads/getty-images/2017/07/497873774.jpeg', 'Walt Fraizer', 'Point Guard', 'New York Knicks, Cleveland Cavaliers', 18.9, 5.9, 6.1, `Hall of Fame, 7x All Star, 2x NBA Champ, 6x All-NBA, 7x All-Defensive, 1967-68 All-Rookie, 1974-75 AS MVP`, 4);
+
+              const mcAdoo = new Seventy('https://a.espncdn.com/photo/2008/0430/nba_u_mcadoonba_200.jpg', 'Bob McAdoo', 'Power Forward and Center', 'Buffalo Braves, New York Knicks, Boston Celtics , Detroit Pistons, Los Angeles Lakers', 22.1, 9.4, 2.3, `Hall of Fame, 5x All Star, 3x Scoring Champ, 2x NBA Champ, 2x All-NBA, 1972-73 All-Rookie, 1974-75 MVP, 1972-73 ROY`, 5 );
+
+              const havlicek = new Seventy('https://i.cdn.turner.com/nba/nba/celtics/photos/john-havlicek-freethrow300400.jpg', 'John Havlicek', 'Small Forward and Shooting Guard', 'Boston Celtics', 20.8, 6.3, 4.8, `Hall of Fame, 13x All Star, 8x NBA Champ, 11x All-NBA, 8x All-Defensive, 1962-63 All-Rookie, 1973-74 Finals MVP`, 6 );
+
+              const gervin = new Seventy('https://www.gannett-cdn.com/media/2017/01/11/USATODAY/USATODAY/636197364621661615-XXX-GERVIN-DRIVES-GERVIN-SD5862-18754981.JPG?width=1588', 'George Gervin', 'Shooting Guard and Small Forward', 'Virgina Squires, San Antinio Spurs , Chicago Bulls', 25.1, 5.3, 2.6, `Hall of Fame, 12x All Star, 4x Scoring Champ, 7x All-NBA, 1996-97 ABA All-Time Team, 2x All-ABA, 1972-73 All-Rookie, 1979-80 AS MVP`, 7 );
+
+              const cowens = new Seventy('https://i.cdn.turner.com/nba/nba/celticsnba/photos/dave-cowens-reverse-layup300400.jpg', 'Dave Cowens', 'Power Forward and Center', 'Boston Celtics, Milaukee Bucks', 17.6, 13.6, 3.8,`Hall of Fame, 8x All Star, 2x NBA Champ, 3x All-NBA, 3x All-Defensive, 1970-71 All-Rookie, 1972-73 AS MVP, 1972-73 MVP, 1970-71 ROY`, 8 );
+
+              const barry = new Seventy('https://menscenter.org/wp-content/uploads/2020/12/rick_barry_freethrow-1024x1017.jpg','Rick Barry', 'Small Forward', 'San Francisco Warriors, Oakland Oaks, Washington Capitols, New York Nets, Golden State Warriors', 24.8, 6.7, 4.9, `Hall of Fame, 12x All Star, 1966-67 Scoring Champ, 1974-75 STL Champ, 1975 NBA Champ, 6x All-NBA, 1996-97 ABA All-Time Team, 4x All-ABA, 1965-66 All-Rookie, 1966-67 AS MVP, 1974-75 Finals MVP, 1965-66 ROY`, 9);
+
+              const pete = new Seventy('https://i2.wp.com/thegamehaus.com/wp-content/uploads/2020/06/4ac9026320b31a7b2a02b08def374c5b-1.jpg?fit=349%2C437&ssl=1', 'Pete Maravich','Shooting Guard','Atlanta Hawks, New Orleans Jazz, Boston Celtics', 24.2, 4.2, 5.4,  `Hall of Fame, 5x All Star, 1976-77 Scoring Champ, 4x All-NBA, 1970-71 All-Rookie`, 10);
+
+              
+      main.innerHTML = `${kareem.format()} ${erving.format()} ${hayes.format()} ${walt.format()} ${mcAdoo.format()} ${havlicek.format()} ${gervin.format()} ${cowens.format()} ${barry.format()} ${pete.format()}`;
+
+
+      </script>
+  </body>
+
+</html>

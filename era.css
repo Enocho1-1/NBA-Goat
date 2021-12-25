@@ -1,0 +1,82 @@
+/* =================================
+  Base Element Styles
+==================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #000000;
+  font-family: monospace;
+  font-size: 1.25em;
+  line-height: 1.6;
+
+}
+
+img{
+  height: 400px;
+  width: 350px;
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+img:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+li{
+  list-style: none;
+}
+
+h1, h2{
+  padding: 10px;
+  color: #fff;
+  text-shadow: 2px 2px #000000;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* ---- Layout Containers ---- */
+.mainHeader{
+  background-color: red;
+  color:white;
+  height: 100px;
+  padding-top: 15px;
+}
+
+.primary{
+  padding: 15px 15px;
+}
+
+/* ---- ID Attributes ---- */
+
+#headerOne, #headerTwo, #headerThree, #headerFour, #headerFive{
+  font-size: 25px;
+}
+#headerOne {
+  background: url('NBAimg/70.jpg');
+}
+
+#headerTwo {
+  background: url('NBAimg/80.jpg');
+}
+
+#headerThree {
+  background: url('NBAimg/90.jpg');
+}
+
+#headerFour {
+  background: url('NBAimg/00.jpg');
+}
+
+#headerFive {
+  background: url('NBAimg/10s.jpg');
+}
+
+
+

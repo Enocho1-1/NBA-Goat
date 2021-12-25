@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"></html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="era.css">
+    <title>90's Era</title>
+  </head>
+  <body>
+    <header id="headerThree" class="mainHeader">
+      <h1>The 90's Era Greats</h1>
+    </header>
+      <div class="primary">
+          <main></main>
+      </div>
+      <script>
+
+        let main = document.querySelector('main'),
+            msg;
+        
+         //Ninety Constructor
+        class Ninety{
+          constructor(image,name,position,teams,points,rebounds,assists, accolades, rank){
+            this.image = image;
+            this.name = name;
+            this.position = position;
+            this.teams = teams;
+            this.points = points;
+            this.rebounds = rebounds;
+            this.assists = assists;
+            this.accolades = accolades;
+            this.rank = rank;
+          }
+
+          format(){
+        
+            msg =  `<img src=${this.image}>
+                    <h1>Rank:${this.rank}</h1>
+                    <h1>Name:${this.name}</h1>
+                    <h1>Position:${this.position}</h1>
+                    <h2>Teams:${this.teams}</h2>
+                    <h2>Accolades:${this.accolades}</h2>
+                    <h2>Points:${this.points}</h2>
+                    <h2>Rebounds:${this.rebounds}</h2>
+                    <h2>Assists:${this.assists}</h2>`;
+            return msg;
+          }
+        }
+
+        //Instansiate constructor 
+        const jordan = new Ninety('https://media.gq.com/photos/5e99bf6fe5102200088e8eb2/3:4/w_1107,h_1476,c_limit/GQ-MichaelJordan-041720.jpg','Michael Jordan','Shooting Guard and Small Forward','Chicago Bulls, Washington Wizards',30.1,6.2,5.3 ,`Hall of Fame,,14x All Star,,10x Scoring Champ,,3x STL Champ,,6x NBA Champ,,11x All-NBA,,9x All-Defensive,,1984-85 All-Rookie,,3x AS MVP,,1987-88 Def. POY,,6x Finals MVP,,5x MVP, ,1984-85 ROY`,1);
+
+        const hakeem = new Ninety('https://cdn.britannica.com/19/200219-050-A33962F1/Hakeem-Olajuwon-1994.jpg','Hakeem Olajuwon',' Center','Houston Rockets, Toronto Raptors',21.8,11.1,2.5,`Hall of Fame,,12x All Star,,2x TRB Champ,3x BLK Champ,2x NBA Champ,12x All-NBA,9x All-Defensive,1984-85 All-Rookie,2x Def. POY,2x Finals MVP,1993-94 MVP`, 2);
+
+        const malone = new Ninety('https://images.squarespace-cdn.com/content/v1/58ee0b551e5b6c8ff18b94ad/1594721163410-D3HOL7XI7LVQHU60AP4T/Karl+Malone+the+greatest+NBA+players+of+all+time.jpg?format=750w','Karl Malone','Power Forward','Utah Jazz, Los Angeles Lakers',25.0,10.1,3.6 ,`Hall of Fame,14x All Star,14x All-NBA,4x All-Defensive,1985-86 All-Rookie,2x AS MVP,2x MVP`,3);
+
+        const barkley = new Ninety('https://www.gannett-cdn.com/presto/2018/10/10/PPHX/fb0c0b7b-0add-4cb6-b4fd-cd7df54e461b-bark4.jpg','Charles Barkley','Power Forward and Small Forward',' Philadelphia 76ers, Phoenix Suns, Houston Rockets',22.1,11.7,3.9,`Hall of Fame,11x All Star,1986-87 TRB Champ,11x All-NBA,1984-85 All-Rookie,1990-91 AS MVP,1992-93 MVP`, 4);
+
+        const robinson = new Ninety('https://media2.fdncms.com/sacurrent/imager/u/original/21191703/screen_shot_2019-02-22_at_12.00.34_pm.png','David Robinson','Center','San Antonio Spurs',21.1,10.6,2.5,`Hall of Fame,10x All Star,1993-94 Scoring Champ,1990-91 TRB Champ,1991-92 BLK Champ,2x NBA Champ,10x All-NBA,8x All-Defensive,1989-90 All-Rookie,1991-92 Def. POY,1994-95 MVP,1989-90 ROY`, 5);
+
+        const pippen = new Ninety('https://nypost.com/wp-content/uploads/sites/2/2021/06/Scottie-Pippen-Bulls-Phil-Jackson.jpg?quality=90&strip=all&w=687','Scottie Pippen','Small Forward','Chicago Bulls, Houston Rockets, Portland TrailBlazers',16.1,6.4,5.2,`Hall of Fame,7x All Star,1994-95 STL Champ,6x NBA Champ,7x All-NBA,10x All-Defensive,1993-94 AS MVP`, 6);
+
+        const shaq = new Ninety('https://www.orlandosentinel.com/resizer/yQkL-3XpThUu3ymEDuQb72zilac=/415x583/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/PSYOSQJVPBHJVP6JSMNNGAKMMY.jpg', 'Shaquille O\'Neal','Center', 'Orlando Magic, Los Angeles Lakers, Miami Heat, Phoenix Suns, Cleveland Cavaliers, Boston Celtics', 23.7, 10.7, 2.5,' Hall of Fame,16x All Star,15x All Star,2x Scoring Champ,4x NBA Champ, 14x All-NBA,3x All-Defensive,1992-93 All-Rookie,3x AS MVP,3x Finals MVP,1999-00 MVP,NBA 75th Anniv. Team,1992-93 ROY', 7)
+
+        const ewing = new Ninety('https://dailyknicks.com/wp-content/uploads/getty-images/2015/10/72466949.jpeg','Patrick Ewing','Center and Power Forward','New York Knicks, Seattle Sonics, Orlando Magic',21.0,9.8,1.9 ,`Hall of Fame,11x All Star,7x All-NBA,3x All-Defensive,1985-86 All-Rookie,1985-86 ROY`, 8);
+
+        const stock = new Ninety('https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/John_Stockton_Lipofskydotcom-32245.jpg/180px-John_Stockton_Lipofskydotcom-32245.jpg','John Stockton','Point Guard','Utah Jazz',13.1,2.7,10.5, `Hall of Fame,10x All Star,9x AST Champ,2x STL Champ,11x All-NBA,5x All-Defensive,1992-93 AS MVP`, 9);
+
+        const payton = new Ninety('https://vz.cnwimg.com/thumb-400x/wp-content/uploads/2011/05/Gary-Payton.jpg','Gary Payton','Point Guard','Seattle Sonics, Milwaukee Bucks, Boston Celtics, Miami Heat',16.3,3.9,6.7 ,`Hall of Fame,9x All Star,1995-96 STL Champ,2006 NBA Champ,9x All-NBA,9x All-Defensive,1990-91 All-Rookie,1995-96 Def. POY`, 10);
+      
+      main.innerHTML = `${jordan.format()} ${hakeem.format()} ${malone.format()} ${barkley.format()} ${robinson.format()} ${pippen.format()} ${shaq.format()} ${ewing.format()} ${stock.format()} ${payton.format()}`;
+
+      ;
+
+      </script>
+  </body>
+
+</html>

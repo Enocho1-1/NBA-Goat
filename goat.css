@@ -1,0 +1,263 @@
+
+/* =================================
+  Base Element Styles
+==================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: monospace;
+  font-size: 1.25em;
+  line-height: 1.6;
+
+}
+
+h2 {
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.875em;
+  margin: 5px;
+}
+
+p{
+  font-size: 1.5625em;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+img{
+  height: 400px;
+  width: 300px;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* ---- Layout Containers ---- */
+
+.img1, .img2, .img3, .img4 {
+  padding: 200px 100px;
+  border-radius: 5px;
+
+}
+
+.img1 {
+  background: url('https://bibscorner.files.wordpress.com/2020/10/video_t1_hero_history.jpeg?w=1920&h=768&crop=1');
+  min-height: 100%;
+}
+
+.img2 {
+  background: url('https://blog.ticketmaster.com/wp-content/uploads/NYK1415_Arena.png');
+  min-height: 400%;
+}
+
+.img3 {
+  background: url('https://miro.medium.com/max/1400/1*oacHpVxEw1rrY7a5PUm0PQ.png');
+  min-height: 400%;
+}
+
+.img4 {
+  background: url('https://i.pinimg.com/originals/7e/8f/57/7e8f576ce15d1f066aef56550fb264f6.png');
+  min-height: 400%;
+}
+
+
+.img1, .img2, .img3, .img4 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section1,
+.section2,
+.section3 {
+  padding: 3.125em 1.875em;
+}
+
+.section2 {
+  background: #808080;
+}
+
+
+/* ---- Page Elements ---- */
+
+.img2, .img3{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.box{
+  box-shadow: 2px 2px white;
+  border-radius: 5px;
+  margin: 15px;
+
+}
+
+
+
+.item{
+  font-size: 1.5625em;
+  font-weight: bolder;
+  letter-spacing: 1;
+  text-align: center;
+  padding-top: 75px;
+  background-color: red;
+  height: 270px;
+  width: 220px;
+  margin: 10px;
+  color:white;
+
+}
+
+
+.box1{
+  background: url('https://nbaat90s.files.wordpress.com/2013/09/erving-300.jpg') 80% 15%;
+}
+
+.box2{
+  background: url('https://i.pinimg.com/originals/aa/81/61/aa8161afaabb953de36b5188932e70c8.jpg') 50% 2%;
+}
+
+.box3{
+  background: url('https://a.espncdn.com/photo/2011/0415/ny_g_ewing_sy_300.jpg') 50% 20%;
+}
+
+.box4{
+  background: url('https://extrabetamerica.imgix.net/cb8e3b9e704f4125b30f33534c70d742.jpg?q=60&auto=format&fit=crop&ixlib=react-8.6.4&w=800') 40% 2%;
+}
+
+.box5{
+  background: url('https://en.africatopsports.com/wp-content/uploads/2014/05/hi-res-f8bb54305a0cb8f1cb4f8a4fa75acf18_crop_north.jpg') 50% 10%;
+}
+
+
+.sectionTitle{
+    color: black;
+    border-bottom: solid 2px black;
+    margin-bottom: 25px;
+}
+
+
+.imgtext {
+  background-color: transparent;
+  color: white;
+  font-size: 1.5625em;
+  font-weight: bold;
+}
+
+
+.title {
+  background: gray;
+  color: white;
+  font-size: 15px;
+  padding: 1.25em 1.875em;
+  text-transform: uppercase;
+}
+
+.buttonStyle{
+  display: block;
+  padding: 10px 5px;
+  margin-left: 70px;
+  border-radius: 5px;
+
+}
+
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 5px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+.modal.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal-header{
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-title{
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.close-button{
+  cursor: point;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.modal-body{
+  padding: 10px 15px;
+}
+
+#overlay{
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1320px){
+  .img2, .img3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item{
+    font-size: 1.5625em;
+    font-weight: bolder;
+    letter-spacing: 1;
+    text-align: center;
+    padding-top: 75px;
+    background-color: red;
+    height: 370px;
+    width: 320px;
+    margin: 10px;
+    color:white;
+  
+  }
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"></html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="era.css">
+    <title>10's Era</title>
+  </head>
+  <body>
+    <header id="headerFive" class="mainHeader">
+      <h1>The 10's Era Greats</h1>
+    </header>
+      <div class="primary">
+          <main></main>
+      </div>
+      <script>
+
+          
+        let main = document.querySelector('main'),
+            msg;
+        // Ten constructor     
+        class Ten{
+          constructor(image,name,position,teams,points,rebounds,assists, accolades, rank){
+            this.image = image;
+            this.name = name;
+            this.position = position;
+            this.teams = teams;
+            this.points = points;
+            this.rebounds = rebounds;
+            this.assists = assists;
+            this.accolades = accolades;
+            this.rank = rank;
+          }
+          format(){
+
+                msg =  `<img src=${this.image}>
+                    <h1>Rank:${this.rank}</h1>
+                    <h1>Name:${this.name}</h1>
+                    <h1>Position:${this.position}</h1>
+                    <h2>Teams:${this.teams}</h2>
+                    <h2>Accolades:${this.accolades}</h2>
+                    <h2>Points:${this.points}</h2>
+                    <h2>Rebounds:${this.rebounds}</h2>
+                    <h2>Assists:${this.assists}</h2>`;;
+            return msg;
+          }
+        }
+
+        //Instantiate constructor 
+        const lebron = new Ten('https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTg1MDUxNTcyODM1NzIyNTg1/lebron-james.jpg','LeBron James','Small Forward, Power Forward, Point Guard, and Shooting Guard','Cleveland Cavaliers, Miami Heat, Los Angeles Lakers',27.0, 7.4,7.4, '17x All Star,2007-08 Scoring Champ,2019-20 AST Champ,4x NBA Champ,17x All-NBA,6x All-Defensive,2003-04 All-Rookie,3x AS MVP,4x Finals MVP,4x MVP, NBA 75th Anniv. Team,2003-04 ROY', 1);
+        
+        const durant = new Ten('https://static01.nyt.com/images/2021/04/15/business/15econ-brf-coinbase/merlin_186240468_57bd6273-0318-4de0-a966-f3d540201223-mediumSquareAt3X.jpg','Kevin Durant','Small Forward, Power Forward, and Shooting Guard','Oklahoma City Thunder, Golden State Warriors, Brooklyn Nets ',27.0,7.1,4.2 ,`11x All Star,4x Scoring Champ,2x NBA Champ,9x All-NBA,2007-08 All-Rookie,2x AS MVP,2x Finals MVP,2013-14 MVP,NBA 75th Anniv. Team,2007-08 ROY`, 2);
+
+        const steph = new Ten('https://upload.wikimedia.org/wikipedia/commons/3/36/Stephen_Curry_dribbling_2016_%28cropped%29.jpg','Stephen Curry','Point Guard ','Golden State Warriors ',24.2,4.6,6.5 ,`7x All Star,2x Scoring Champ,2015-16 STL Champ,3x NBA Champ,7x All-NBA,2009-10 All-Rookie,2x MVP,NBA 75th Anniv. Team`, 3);
+
+        const harden = new Ten('https://basketballforever.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2021/03/27132811/James-Harden-Nets.jpg','James Harden','Shooting Guard and Point Guard ',' Oklahoma City Thunder, Houston Rockets, Brooklyn Nets',25.1,5.5,6.6 ,`9x All Star,3x Scoring Champ,2016-17 AST Champ,7x All-NBA ,2009-10 All-Rookie ,2017-18 MVP ,NBA 75th Anniv. Team ,2011-12 Sixth Man`, 4);
+
+        const leonard = new Ten('https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTc5OTEyNDI1MTU0MjkxMDMy/usatsi_15752048_168384702_lowres.jpg','Kawhi Leonard','Small Forward',' San Antonio Spurs, Toronto Raptors, Los Angeles Clippers',19.2,6.4,2.9,`5x All Star,2014-15 STL Champ,2x NBA Champ,5x All-NBA,7x All-Defensive,2011-12 All-Rookie,2019-20 AS MVP,2x Def. POY,2x Finals MVP ,NBA 75th Anniv. Team`, 5);
+
+        const westbrook = new Ten('https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTg1MDYxOTA1NDUzMjk0OTM3/russell-westbrook-usa-today.jpg','Russell Westbrook','Point Guard','Oklahoma City Thunder, Houston Rockets, Washington Wizards, Los Angeles Lakers',23.1,7.4,8.5,`9x All Star,2x Scoring Champ,3x AST Champ,9x All-NBA,2008-09 All-Rookie,2x AS MVP,2016-17 MVP,NBA 75th Anniv. Team`, 6);
+
+        const paul = new Ten('https://cdn.vox-cdn.com/thumbor/-b1FoxdWqudxcNqjDBCw8bBq4a0=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22753407/1234083278.jpg','Chris Paul','Point Guard','New Orleans Hornets, Los Angeles Clippers, Houston Rockets, Oklahoma City Thunder, Phoenix Suns',18.3,4.5,9.4 ,`11x All Star,4x AST Champ,6x STL Champ,10x All-NBA,9x All-Defensive,2005-06 All-Rookie,2012-13 AS MVP,NBA 75th Anniv. Team,2005-06 ROY`, 7);
+
+        const davis = new Ten('https://m.media-amazon.com/images/M/MV5BZWQ1OGFhYjUtNTZhNy00YTE5LTlkZWItZTQzNmFkYjYxMjVkXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_.jpg','Anthony Davis','Power Forward and Center','New Orleans Hornets, Los Angeles LAkers',23.9,10.2,2.3 , `8x All Star,3x BLK Champ,2020 NBA Champ,4x All-NBA,4x All-Defensive,2012-13 All-Rookie,2016-17 AS MVP,NBA 75th Anniv. Team`, 8);
+
+        const dwade = new Ten('https://www.gannett-cdn.com/presto/2018/09/17/USAT/05ff15dc-b84e-40eb-ae25-54e57eeb36bf-2018-09-16_Dwyane_Wade.jpg?crop=1884,2512,x0,y196&quality=50&width=640', 'Dwyane Wade', 'Shooting Guard and Point Guard', 'Miami Heat, Chicago Bulls, Cleveland Cavaliers', 22.0, 4.7, 5.4, '13x All Star, 2008-09 Scoring Champ,3x NBA Champ,8x All-NBA,3x All-Defensive,2003-04 All-Rookie,2009-10 AS MVP,2005-06 Finals MVP,NBA 75th Anniv. Team', 9);
+
+        const green = new Ten('https://upload.wikimedia.org/wikipedia/commons/9/96/Draymond_Green_2019.jpg', 'Draymond Green',' Power Forward and Small Forward','Golden State Warriors',8.8,6.9,5.4 ,`3x All Star,2016-17 STL Champ,3x NBA Champ,2x All-NBA,6x All-Defensive,2016-17 Def. POY`, 10);
+      
+    
+      main.innerHTML = `${lebron.format()} ${durant.format()} ${steph.format()} ${harden.format()} ${leonard.format()} ${westbrook.format()} ${paul.format()} ${davis.format()} ${dwade.format()} ${green.format()}`;
+
+      ;
+
+      </script>
+  </body>
+
+</html>
